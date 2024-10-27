@@ -1,1 +1,24 @@
-<p>product-catalog works!</p>
+<div class="vehicle-list">
+    <div class="vehicle-card" *ngFor="let vehicle of vehicles">
+        <h2>{{ vehicle.brand }} {{ vehicle.model }}</h2>
+        <div class="vehicle-image">
+            <img [src]="vehicle.vehicle_image" alt="Imagen del vehículo" />
+        </div>
+        <div class="vehicle-details-container">
+            <div class="vehicle-details">
+                <p><strong>Placas:</strong> {{ vehicle.license_plate }}</p>
+                <p><strong>Tarifa de alquiler:</strong> ${{ vehicle.rental_rate }}</p>
+                <p><strong>Estado:</strong> 
+                    <span [ngClass]="{'status-available': vehicle.status === 'Available', 'status-unavailable': vehicle.status === 'Not Available'}">
+                        {{ vehicle.status }}
+                    </span>
+                </p>
+                <p><strong>Nombre del conductor:</strong> {{ vehicle.driver_name }}</p>
+                <p><strong>Edad del conductor:</strong> {{ vehicle.driver_age }}</p>
+            </div>
+            <div class="driver-image">
+                <img [src]="vehicle.driver_image" alt="Imagen del conductor" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+body {
+    font-family: 'Oswald';
+}
+
+h2 {
+    color: #ffffff; /* Azul profundo */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'Abril Fatface';
+}
+
+p {
+    color: #274b6a; /* Gris oscuro */
+    margin: 5px 0;
+    padding: 5px 0;
+    font-family: 'Oswald';
+}
+
+.status-available {
+    color: #27a725; /* Verde fuerte */
+    font-weight: bold;
+}
+
+.status-unavailable {
+    color: #e63946; /* Rojo intenso */
+    font-weight: bold;
+}
+
+.vehicle-list {
+    font-family: 'Luminari', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #e0d9e0; /* Azul pastel muy claro */
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-card {
+    background-color: #8e90a7; /* Blanco */
+    border: 1px solid #a3b5c1;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 30px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+.vehicle-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.vehicle-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.vehicle-details-container {
+    background-color: #b7b4c7; /* Beige claro para resaltar la "cédula" */
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 99%;
+    gap: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-details {
+    flex: 1;
+    text-align: left;
+}
+
+.driver-image {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 15px;
+}
+
+.driver-image img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #666666bb; /* Gris medio */
+}
+
+@media (max-width: 768px) {
+    .vehicle-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .vehicle-card {
+        width: 100%;
+    }
+}

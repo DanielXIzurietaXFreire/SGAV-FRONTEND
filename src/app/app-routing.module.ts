@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { ProductCatalogComponent } from './product-catalog/product-catalog.component';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
+import { RegisterComponent } from './register/register.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'product-catalog', component: ProductCatalogComponent },
+  { path: 'recover-password', component: RecoverPasswordComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' } // Redirigir a Login por defecto
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
