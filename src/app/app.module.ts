@@ -6,7 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { ProductCatalogComponent } from './product-catalog/product-catalog.component';
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { ResetPasswordComponent } from './reset-password/reset-password.component'; 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientMo
     LoginComponent,
     ProductCatalogComponent,
     RecoverPasswordComponent,
-    RegisterComponent
+    RegisterComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule // Asegúrate de agregar esto a imports
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
