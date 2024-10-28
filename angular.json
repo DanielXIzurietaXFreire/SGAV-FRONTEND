@@ -99,6 +99,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "d13b9cf4-c921-4956-92a2-9e74806a01b1"
+=======
+    "analytics": "1fbbc76c-3667-4d78-8986-1147dc25ed62"
+>>>>>>> origin/Ramirez
   }
 }
